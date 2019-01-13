@@ -7,18 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.example.dan.myapplication.Entities.OpenChannel;
+import com.example.dan.myapplication.Entities.Proba;
 import com.example.dan.myapplication.R;
 
 import java.util.List;
 
 // template-u contine clasa care tine datele
-public class ChannelsListAdapter extends RecyclerView.Adapter<ChannelsListAdapter.ProbeListHolder> {
+public class ProbeListAdapter extends RecyclerView.Adapter<ProbeListAdapter.ProbeListHolder> {
     private Context mContext;
-    private List<OpenChannel> probaList;
+    private List<Proba> probaList;
 
-    public ChannelsListAdapter(Context context, List<OpenChannel> probe){
+    public ProbeListAdapter(Context context, List<Proba> probe){
         this.mContext = context;
         this.probaList = probe;
     }
@@ -33,7 +32,7 @@ public class ChannelsListAdapter extends RecyclerView.Adapter<ChannelsListAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ProbeListHolder probeListHolder, int i) {
-        OpenChannel proba = probaList.get(i);
+        Proba proba = probaList.get(i);
         probeListHolder.textView.setText(proba + "");
     }
 
